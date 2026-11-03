@@ -1,8 +1,11 @@
 *
 !*/
 !*.c
+!*.h
 !example/*.b
 !.gitignore
+!.clang-format
+!.clang-tidy
 !LICENSE
 !README.md
 !makefile

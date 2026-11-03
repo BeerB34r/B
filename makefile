@@ -30,7 +30,7 @@ MAKEFLAGS	+= -r --no-print-directory -j
 .EXTRA_PREREQS	= $(firstword $(MAKEFILE_LIST))
 .DEFAULT_GOAL	= all
 .PRECIOUS	: $(BINDIR) $(DEPDIR)
-.PHONY		: clean fclean re all test bonus
+.PHONY		: clean fclean re all test bonus clangd
 -include $(DEP)
 
 NAME		= B
@@ -59,3 +59,5 @@ fclean		:
 re		:
 	+$(MAKE) fclean
 	+$(MAKE)
+clangd		:
+	intercept-build-15 $(MAKE) -B

@@ -1,2 +1,2 @@
-SRC=main.c
+SRC=main.c cmdline.c
 BSRC=
